@@ -1,8 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import googleIcon from '../assets/images/google-icon.png';
 import twitterIcon from '../assets/images/twitter-icon.png';
 import '../assets/styles/components/Login.scss';
-
 
 const Login = () => (
 	<section className="login">
@@ -28,7 +28,8 @@ const Login = () => (
 				</div>
 			</section>
 			<p className="login__container--register">
-				No tienes ninguna cuenta <a href="">Regístrate</a>
+				No tienes ninguna cuenta
+				<Link to="/register">Regístrate</Link>
 			</p>
 		</section>
 	</section>

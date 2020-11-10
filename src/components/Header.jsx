@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import classNames from 'classnames';
 import gravatar from '../utils/gravatar';
 import { logoutRequest } from '../actions/';
 import logo from '../assets/images/logo-platzi-video-BW2.png';
@@ -8,17 +9,20 @@ import userIcon from '../assets/images/user-icon.png';
 import '../assets/styles/components/Header.scss';
 
 const Header = (props) => {
-	const { user } = props;
-
+	const { user, isLogin, isRegister } = props;
 	const hashUser = Object.keys(user).length > 0;
-
+	
 	const handleLogOut = () => {
-
-		props.logoutRequest({})
+		props.logoutRequest({});
 	};
 
+	const headerClass = classNames('header', {
+		isLogin,
+		isRegister,
+	});
+
 	return (
-		<header className="header">
+		<header className={headerClass}>
 			<Link to="/">
 				<img className="header__img" src={logo} alt="Platzi Video" />
 			</Link>

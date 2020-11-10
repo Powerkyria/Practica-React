@@ -10,3 +10,21 @@ body {
 * {
 	box-sizing: border-box;
 }
+
+.button {
+	background-color: rgba(255, 255, 255, 0.3);
+	border: none;
+	border-radius: 25px;
+	color: white;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: 'Muli', sans-serif;
+	height: 50px;
+	letter-spacing: 1px;
+	margin: 10px 0px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	-ms-border-radius: 25px;
+	-o-border-radius: 25px;
+}
